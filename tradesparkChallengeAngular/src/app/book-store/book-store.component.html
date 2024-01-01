@@ -1,24 +1,43 @@
 <div class="background-image">
-    <h1> Book Store </h1>
-    <div class="book-list">
-        <div>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Book Title</th>
-                        <th>Author</th>
-                        <th>Category</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let book of books">
-                        <td>{{ book["title"] }}</td>
-                        <td>{{ book["author"]["name"] }}</td>
-                        <td>{{ categoriesToString(book['categories']) }}</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-</div>
+  <h1>Book Store</h1>
+  
+  <div>
+    <label for="filterType" class="label">Filter by:</label>
+    <select id="filterType" [(ngModel)]="selectedFilterType">
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+      <option value="category">Category</option>
+    </select>
+    <input type="text" [(ngModel)]="filterValue" placeholder="Enter search term">
+    <button (click)="applyFilter()"class="white-button">Apply Filter</button>
+    <a [routerLink]="'/create-book/'" class="white-button">Add Book</a>
 
+  </div>
+
+  <div class="book-list">
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Book Title</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th></th>
+
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of filteredBooks">
+            <td>{{ book["title"] }}</td>
+            <td>{{ book["author"]["name"] }}</td>
+            <td>{{ categoriesToString(book['categories']) }}</td>
+            <td>
+            <a [routerLink]="'/edit-book/' + book.id" class="white-button">Edit Book</a>
+              <button (click)="deleteBook(book.id)"class="white-button">Delete Book</button>
+            </td>          
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
