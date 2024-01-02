@@ -1,6 +1,6 @@
 # TradeSparkChallange
 
-#Comentarios sobre el funcionamiento
+# Comentarios sobre el funcionamiento
 
 Punto 1: Para el filtrado, ya sea del título, el autor o la categoría, la búsqueda debe ser de forma completa. En caso de que el autor sea Julián Wagner, filtrando solamente por Julián no vas a obtener nada. Decidí implementarlo de esta forma porque sino podría haber otra autora llamada Julia, y si filtraras por su nombre también te mostraría Julián, ya que coincidiría.
 
