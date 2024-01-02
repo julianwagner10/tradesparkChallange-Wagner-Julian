@@ -96,7 +96,7 @@ input[type="text"] {
     cursor: pointer; 
     transition: background-color 0.3s ease; 
     margin-left: 8px; 
-    text-decoration: none; /* Quitar el subrayado */
+    text-decoration: none; 
 }
 
 .white-button:hover {
@@ -104,7 +104,59 @@ input[type="text"] {
     color: black;
 }
   
-  
+.delete-button {
+    background-color: white;
+    color: black; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-left: 8px; 
+    text-decoration: none; 
+}
+
+.delete-button:hover {
+    background-color: rgba(255, 0, 0, 0.75); /* Rojo con 80% de opacidad */
+    color: white;
+}  
+
+.add-button {
+    background-color: white;
+    color: black; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-left: 8px; 
+    text-decoration: none; 
+}
+
+.add-button:hover {
+    background-color: rgba(0, 128, 0, 0.5); /* Verde con 80% de opacidad */
+    color: white;
+}  
+
+
+.edit-button {
+    background-color: white;
+    color: black; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    padding: 10px 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-left: 8px; 
+    text-decoration: none; 
+}
+
+.edit-button:hover {
+    background-color: rgba(0, 0, 255, 0.5); /* Azul con 80% de opacidad */
+    color: white;
+}  
+
+
 .add-category {
     background-color: white; 
 }
@@ -143,7 +195,7 @@ label {
 }
 
 .table-cell {
-    margin-top: 12.5px; /* Ajusta según sea necesario */
+    margin-top: 12.5px; 
   }
   
   .message {

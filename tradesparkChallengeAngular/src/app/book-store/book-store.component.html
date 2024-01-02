@@ -10,7 +10,7 @@
     </select>
     <input type="text" [(ngModel)]="filterValue" placeholder="Enter search term">
     <button (click)="applyFilter()"class="white-button">Apply Filter</button>
-    <a [routerLink]="'/create-book/'" class="white-button">Add Book</a>
+    <a [routerLink]="'/create-book/'" class="add-button">Add Book</a>
 
   </div>
 
@@ -32,8 +32,8 @@
             <td>{{ book["author"]["name"] }}</td>
             <td>{{ categoriesToString(book['categories']) }}</td>
             <td>
-            <a [routerLink]="'/edit-book/' + book.id" class="white-button">Edit Book</a>
-              <button (click)="deleteBook(book.id)"class="white-button">Delete Book</button>
+            <a [routerLink]="'/edit-book/' + book.id" class="edit-button">Edit Book</a>
+              <button (click)="deleteBook(book.id)"class="delete-button">Delete Book</button>
             </td>          
           </tr>
         </tbody>
