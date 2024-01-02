@@ -1,24 +1,42 @@
-<div class="background-image">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="create-book.component.css"> <!-- Reemplaza "tu-archivo.css" con la ruta correcta a tu archivo CSS -->
+</head>
+<body class="body">
+  <div class="background-image">
     <h1>Add Book</h1>
-  
-  <div class="book_image">
-    <div class="book-content">
-      <div class="input-container">
-        <label for="editTitle" class="label">Title:</label>
-        <input type="text" id="editTitle" [(ngModel)]="title" class="common-input">
-      </div>
-      <div class="input-container">
-        <label for="editAuthor" class="label">Author:</label>
-        <input type="text" id="editAuthor" [(ngModel)]="author" class="common-input">
-      </div>
-      <div class="input-container">
-        <label for="editCategory" class="label">Category:</label>
-        <input type="text" id="editCategory" [(ngModel)]="categories" class="common-input">
-      </div>
-      <button (click)="saveChanges()" class="white-button">Save Changes</button>
+
+<div class="container">
+    <div class="row">
+                <div class="book_image">
+                    <div class="book-content">
+                        <div class="input-container">
+                            <label for="editTitle" class="label">Title:</label>
+                            <input type="text" id="editTitle" [(ngModel)]="title" class="common-input">
+                        </div>
+                        <div class="input-container">
+                            <label for="editAuthor" class="label">Author:</label>
+                            <input type="text" id="editAuthor" [(ngModel)]="author" class="common-input">
+                        </div>
+                        <div class="input-container">
+                            <label for="editCategory" class="label">Category:</label>
+                            <input type="text" id="editCategory" [(ngModel)]="categories" class="common-input">
+                        </div>
+                        <button (click)="saveChanges()" class="white-button">Save Changes</button>
+                    </div>
+                </div>
+              </div>
     </div>
-  </div>
-  
-  </div>
-  
-  
+</div>
+
+<!-- Bootstrap JS and any additional scripts go here -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
